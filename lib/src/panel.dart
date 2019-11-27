@@ -271,7 +271,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
                           (widget.margin != null ? widget.margin.horizontal : 0) -
                           (widget.padding != null ? widget.padding.horizontal : 0),
                   child: Container(
-                    height: widget.maxHeight,
+                    height: _ac.value * (widget.maxHeight - widget.minHeight) + widget.minHeight,
                     child: widget.panel,
                   )
                 ),
